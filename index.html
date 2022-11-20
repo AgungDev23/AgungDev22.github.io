@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamu Nenyee</title>
+    <link rel="stylesheet" href="../cepmek/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+<h1>CEPMEK EXE</h1><br>
+	<h1>skormu</h1>
+	<h1 id="click">0</h1>
+<img src="../cepmek/cp1.png" id="cepmek"></img>
+<button onclick="plus()">KAMU NANYA</button>
+</body>
+<script>
+let click = 0 ;
+function plus(){
+	const audio = new Audio("../cepmek/sound.mp3");
+	audio.play()
+	click+= 1
+	document.getElementById("click").innerHTML = +click
+    document.getElementById("cepmek").src = "../cepmek/cp2.png";
+    audio.addEventListener("ended", function(){
+    	document.getElementById("cepmek").src = "../cepmek/cp1.png";
+    })
+	}
+</script>
